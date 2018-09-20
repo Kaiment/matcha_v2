@@ -1,0 +1,88 @@
+$white: #ffffff;
+$gold: #ffd700;
+$dark_gold: #be8c00;
+$main_color: #f7f7f7;
+$secondary_color: #0c0c0c;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+
+h5 {
+    font-size: 16px;
+    margin: 3px 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1200px 1fr;
+    background-color: $secondary_color;
+}
+
+.menu_button {
+    border: 1px solid $secondary_color;
+    border-radius: 0px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 11px;
+    text-align: center;
+    color: $gold;
+    background-color: #161616;
+    width: 100%;
+    margin: 5px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &:focus {
+        outline: none;
+        border-color: $gold; 
+    }
+    &:active {
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition: 0s;
+        background-color: $main_color;
+        color: $secondary_color;
+    }
+    &:hover {
+        text-decoration: none;
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+        background-color: $dark_gold;
+        border-color: $gold;
+    }
+    &:disabled {
+        background-color: rgb(128, 128, 128);
+        color: black;
+        cursor: not-allowed;
+    }
+    cursor: pointer;
+}
+
+.text_input {
+    height: 20px;
+    padding: 2px;
+    margin: 2px 0;
+    border: 1px solid $secondary_color;
+    outline: none;
+    &::-webkit-input-placeholder {
+        font-size: 13px;
+        font-family: sans-serif;
+        color: #35353575;
+    }
+    &:hover {
+        border-color: $gold;
+    }
+    &:focus {
+        border-color: $gold;
+    }
+}

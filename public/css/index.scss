@@ -1,0 +1,24 @@
+@import '_base.scss';
+
+.main_frame {
+    background-color: $secondary_color;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-column: 2;
+    padding: 10px;
+}
+
+.forms {
+    display: grid;
+    grid-column: 2;
+    padding: 10px;
+    margin: 8px;
+    background-color: $white;
+    border: 1px solid #9b9b9b;
+    border-radius: 2px;
+}
+
+.form {
+    display: grid;
+    margin: 4px 2px;
+}

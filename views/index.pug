@@ -1,0 +1,24 @@
+extends _base.pug
+
+block css
+    link(rel="stylesheet", type="text/css", href="/css/index.css")
+    
+block content
+    div(class="main_frame")
+
+        div(class="forms")
+            form#signup_form(class="form" method="post" action="/signup")
+                h5 JOIN
+                input(class="text_input" type='email', name='email', placeholder='EMAIL', value='')
+                input(class="text_input" type='text', name='name', placeholder='NAME')
+                input(class="text_input" type='text', name='surname', placeholder='SURNAME')
+                input(class="text_input" type='text' name='login' placeholder='LOGIN')
+                input(class="text_input" type='password' name='password' placeholder='PASSWORD')
+                input(class="text_input" type='password' name='confirm_password' placeholder='CONFIRM PASSWORD')
+                input(class="menu_button" type='submit' value='SIGNUP')
+        
+            form#signin_form(class="form" method='post')
+                h5 ALREADY A MEMBER ?
+                input(class="text_input" type='text', name='login', placeholder='EMAIL OR LOGIN')
+                input(class="text_input" type='password', name='password', placeholder='PASSWORD')
+                input(class="menu_button" type='submit', value='SIGNIN')
